@@ -76,8 +76,11 @@ WSGI_APPLICATION = 'pycar.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'pycar',
+        'USER': 'postgres',
+        'PASSWORD': '1596321',
+        'HOST': 'localhost'
     }
 }
 
@@ -123,3 +126,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'pycar/static'),
 ]
+
+# Media setting
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
